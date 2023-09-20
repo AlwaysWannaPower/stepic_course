@@ -7,25 +7,24 @@ list_of_point = []
 for i in range(1, number+1):
     tupl = tuple(input().split())
     list_of_point.append(tupl)
-    print(tupl)
-print(number, list_of_point)
 
-first = 0
-second = 0
-three = 0
-four = 0
+
+count = [0, 0, 0, 0]
 
 for point in list_of_point:
-    if int(point[0]) > 0 and int(point[1]) > 0:
-        first += 1
-    elif int(point[0]) > 0 and int(point[1]) < 0:
-        four += 1
-    elif int(point[0]) < 0 and int(point[1]) > 0:
-        second += 1
-    elif int(point[0]) < 0 and int(point[1]) < 0:
-        three += 1
+    x = int(point[0])
+    y = int(point[1])
+    if x > 0 and y > 0:
+        count[0] += 1
+    elif x < 0 and y > 0:
+        count[1] += 1
+    elif x < 0 and y < 0:
+        count[2] += 1
+    elif x > 0 and y < 0:
+        count[3] += 1
 
-print(f"Первая четверть:{first}")
-print(f"Вторая четверть: {second}")
-print(f"Третья четверть: {three}")
-print(f"Четвертая четверть: {four}")
+# четверти можно в список строк и выводить элементы
+print(f"Первая четверть:{count[0]}")
+print(f"Вторая четверть: {count[1]}")
+print(f"Третья четверть: {count[2]}")
+print(f"Четвертая четверть: {count[3]}")
