@@ -1,3 +1,7 @@
+"""
+Provides some arithmetic functions
+"""
+
 # Coordinate quarters
 
 # Необходимо подсчитать и вывести количество точек, лежащих в каждой
